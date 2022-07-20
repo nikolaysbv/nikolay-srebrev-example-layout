@@ -4,3 +4,19 @@
   align-items: center;
   justify-items: center;
 }
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 5px solid lightgray;
+  border-radius: 50%;
+  border-top-color: #6896b1;
+  animation: spinner 2s linear infinite;
+  margin: 2rem auto;
+}

@@ -10,12 +10,14 @@ function App() {
     fetch("/api/v1/cards")
       .then((response) => response.json())
       .then((data) => {
-        setIsLoading(false);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1500);
         setCards(data);
       });
   }, []);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div className="loading"></div>;
 
   return (
     <main className="App">
