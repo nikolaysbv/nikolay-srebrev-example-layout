@@ -1,12 +1,17 @@
 import "./Card.css";
 
 const Card = ({ img, title, excerpt, category }) => {
+  console.log(img);
   return (
     <li className="card">
-      <div className="img">{img}</div>
-      <div className="title">{title}</div>
-      <div className="excerpt">{excerpt}</div>
-      <div className="category">{category}</div>
+      <img src={img} alt="news article pic" className="img" />
+      <div className="text-category-container">
+        <div className="text-container">
+          <h2 className="title">{title}</h2>
+          <p className="excerpt">{excerpt}</p>
+        </div>
+        <p className="category">{category}</p>
+      </div>
     </li>
   );
 };

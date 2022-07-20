@@ -3,14 +3,7 @@ import CardsList from "./components/CardsList";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [cards, setCards] = useState([
-    {
-      img: "img1",
-      title: "title1",
-      excerpt: "excerpt1",
-      category: "category1",
-    },
-  ]);
+  const [cards, setCards] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
