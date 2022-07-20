@@ -1,9 +1,16 @@
 .card {
   display: flex;
   flex-direction: column;
-  flex: 0 1 356px;
+  flex: 0 1 320px;
   justify-content: space-between;
   background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 5px lightgray;
+  /* transform: scale(1.005); */
+  cursor: pointer;
 }
 
 .img {
@@ -21,13 +28,27 @@
 .text-container {
   display: flex;
   flex-direction: column;
-  row-gap: 0.3rem;
+  row-gap: 0.5rem;
 }
 
 .title {
   margin-bottom: 0;
+  margin-top: 1rem;
 }
 
 .excerpt {
   margin-top: 0;
+}
+
+.category {
+  position: relative;
+  font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #adadad;
+  text-transform: uppercase;
+  left: -7px;
+  margin-bottom: 0.75rem;
+}
+
+.icon {
+  vertical-align: middle;
 }

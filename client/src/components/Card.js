@@ -1,4 +1,6 @@
 import "./Card.css";
+import { TbMinusVertical } from "react-icons/tb";
+import { IconContext } from "react-icons";
 
 const Card = ({ img, title, excerpt, category }) => {
   console.log(img);
@@ -10,7 +12,14 @@ const Card = ({ img, title, excerpt, category }) => {
           <h2 className="title">{title}</h2>
           <p className="excerpt">{excerpt}</p>
         </div>
-        <p className="category">{category}</p>
+        <p className="category">
+          <IconContext.Provider value={{ color: "#6896b1", size: "1.25em" }}>
+            <span className="icon">
+              <TbMinusVertical />
+            </span>
+          </IconContext.Provider>
+          {category}
+        </p>
       </div>
     </li>
   );
